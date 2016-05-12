@@ -1,13 +1,13 @@
 {
   "name": "add-dependency",
   "description": "Add dependencies to package.json, without installing them",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "license": "MIT",
   "main": "lib/index.js",
   "author": "Raymond Hammarling",
   "repository": {
-      "type": "git",
-      "url": "https://github.com/raymond-h/add-dependency"
+    "type": "git",
+    "url": "https://github.com/raymond-h/add-dependency"
   },
   "bin": {
     "add-dependency": "./lib/cli.js",
