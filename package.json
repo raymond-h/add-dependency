@@ -5,6 +5,11 @@
   "license": "MIT",
   "main": "lib/index.js",
   "author": "Raymond Hammarling",
+  "bin": {
+    "add-dependency": "./lib/cli.js",
+    "add-deps": "./lib/cli.js",
+    "addeps": "./lib/cli.js"
+  },
   "scripts": {
     "lint": "eslint src/ test/",
     "test": "mocha --compilers js:babel-register test/",
@@ -24,5 +29,10 @@
     "eslint": "^2.9.0",
     "mocha": "^2.4.5",
     "onchange": "^2.4.0"
+  },
+  "dependencies": {
+    "deps-object": "^2.0.2",
+    "object-assign": "^4.1.0",
+    "sorted-object": "^2.0.0"
   }
 }
