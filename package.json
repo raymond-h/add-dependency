@@ -32,6 +32,7 @@
   },
   "dependencies": {
     "deps-object": "^2.0.2",
+    "minimist": "^1.2.0",
     "object-assign": "^4.1.0",
     "sorted-object": "^2.0.0"
   }
