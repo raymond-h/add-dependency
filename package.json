@@ -1,0 +1,28 @@
+{
+  "name": "add-dependency",
+  "description": "Add dependencies to package.json, without installing them",
+  "version": "0.0.0",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "author": "Raymond Hammarling",
+  "scripts": {
+    "lint": "eslint src/ test/",
+    "test": "mocha --compilers js:babel-register test/",
+    "build": "babel -d lib/ src/",
+    "pretest": "npm run lint",
+    "watch": "onchange src/ -- npm run build && echo Done",
+    "dev": "npm run watch",
+    "prepublish": "npm run build"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.8.0",
+    "babel-eslint": "^6.0.4",
+    "babel-preset-es2015-node4": "^2.1.0",
+    "babel-preset-stage-0": "^6.5.0",
+    "babel-register": "^6.8.0",
+    "chai": "^3.5.0",
+    "eslint": "^2.9.0",
+    "mocha": "^2.4.5",
+    "onchange": "^2.4.0"
+  }
+}
