@@ -8,16 +8,18 @@ import minimist from 'minimist';
 import { addDependencies } from './index';
 
 const argv = minimist(process.argv.slice(2), {
-    boolean: ['dev', 'optional'],
+    boolean: ['dev', 'optional', 'peer'],
     alias: {
         dev: 'D',
-        optional: 'O'
+        optional: 'O',
+        peer: 'P'
     }
 });
 
 let depKind = 'dependencies';
 if(argv.dev) { depKind = 'devDependencies'; }
 else if(argv.optional) { depKind = 'optionalDependencies'; }
+else if(argv.peer) { depKind = 'peerDependencies'; }
 
 const pkgJson = JSON.parse(fs.readFileSync('./package.json'), { encoding: 'utf-8' });
 
